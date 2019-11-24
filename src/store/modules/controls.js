@@ -20,22 +20,22 @@ const actions = {
 };
 
 const mutations = {
-  setSearchBy: (state, n) => {
-    state.searchBy = n;
+  setSearchBy: (state, payload) => {
+    state.searchBy = payload;
   },
-  setSearchPhrase: (state, n) => {
-    state.setSearchPhrase = n;
+  setSearchPhrase: (state, payload) => {
+    state.setSearchPhrase = payload;
   },
-  setSortBy: (state, n) => {
+  setSortBy: (state, payload) => {
     if (!state.sortType) {
       state.sortType = 1;
     }
 
-    if (state.sortBy === n) {
+    if (state.sortBy === payload) {
       state.sortType *= -1;
     }
 
-    state.sortBy = n;
+    state.sortBy = payload;
   }
 };
 
